@@ -33,7 +33,7 @@ app.use(bodyParser.json({ limit: '2048kb' }));
 app.use(express.static(join(__dirname, 'public')));
 
 app.use('/api', authRoutes);
-app.use('/api', profileRoutes);
+app.use('/api/profile', profileRoutes);
 app.use('/api/users', userRoutes);
 app.use('/api/news', newsRoutes);
 app.get('*', (req, res, next) => {

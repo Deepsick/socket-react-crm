@@ -15,7 +15,7 @@ const upload = multer({ storage });
 const controller = require(join(__dirname, '..', 'controllers', 'profile'));
 const router = express.Router();
 
-router.get('/profile', controller.getProfile);
-router.patch('/profile', upload.single('avatar'), controller.patchProfile);
+router.get('/', controller.getProfile);
+router.patch('/', upload.single('avatar'), controller.patchProfile);
 
 module.exports = router;
